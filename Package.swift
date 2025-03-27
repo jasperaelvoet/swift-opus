@@ -18,7 +18,7 @@ let package = Package(
 		.library(
 			name: "Opus",
 			type: .dynamic,
-			targets: ["Opus", "Copus"]
+			targets: ["Opus"]
 		),
 	],
 	dependencies: [],
@@ -108,7 +108,8 @@ let package = Package(
 			]
 		),
 		.target(
-			name: "Opus"
+			name: "Opus",
+			dependencies: ["Copus"]
 		),
 		.testTarget(
 			name: "OpusTests",
