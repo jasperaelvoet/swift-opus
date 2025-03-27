@@ -12,10 +12,12 @@ let package = Package(
 	products: [
 		.library(
 			name: "Copus",
+			type: .static,
 			targets: ["Copus"]
 		),
 		.library(
 			name: "Opus",
+			type: .dynamic,
 			targets: ["Opus", "Copus"]
 		),
 	],
@@ -106,8 +108,7 @@ let package = Package(
 			]
 		),
 		.target(
-			name: "Opus",
-			dependencies: ["Copus"]
+			name: "Opus"
 		),
 		.testTarget(
 			name: "OpusTests",
